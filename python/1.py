@@ -14,3 +14,6 @@ git push -u origin master
                 
 git remote add origin https://github.com/KingJin-web/c_syudy.git
 git push -u origin master               
+
+git add .
+git commit -m "C语言数据结构"
