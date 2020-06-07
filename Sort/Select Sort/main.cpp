@@ -11,7 +11,7 @@ void selection_sort(int arr[], int len)
     int i,j;
 
         for (i = 0 ; i < len - 1 ; i++)
-    {
+        {
                 int min = i;
                 for (j = i + 1; j < len; j++)     //走訪未排序的元素
                         if (arr[j] < arr[min])    //找到目前最小值
