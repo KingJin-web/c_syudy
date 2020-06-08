@@ -4,8 +4,6 @@
     "args": [
         "-g",
         "${file}",
-        "-include",
-        "${workspaceRoot}\\.vscode\\head.h",
         "-o",
         "${fileBasenameNoExtension}.exe"
     ], 
