@@ -4,11 +4,10 @@
     "args": [
         "-g",
         "${file}",
+        "-include","${workspaceRoot}\\.vscode\\head.h",
         "-o",
         "${fileBasenameNoExtension}.exe"
-    ], 
-    
-    // 编译命令参数
+    ], // 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
         "fileLocation": [
@@ -24,15 +23,4 @@
             "message": 5
         }
     }
-    "presentation": {
-        "echo": true,
-        "reveal": "always",
-        "focus": false,
-        "panel": "new", //这里shared表示共享，改成new之后每个进程创建新的端口
-        "showReuseMessage": true,
-        "clear": false
-        }
-    
 }
-
-

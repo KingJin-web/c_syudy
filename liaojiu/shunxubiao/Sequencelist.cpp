@@ -1,6 +1,6 @@
 #include "Sequencelist.h"
 #include<stdio.h>
-using namespace std;
+ 
 
 /**
  * 向顺序表中的index下标处插入某个元素
@@ -13,11 +13,11 @@ void InsertElement(SeqList * seqList, int index, ElementType element){
     //2.index的值是否合法[0,MAX_SIZE-1]
     //3.插入的index应该在length之内
     //4.从Length-1个下标开始，前面一个元素赋值给后面一个元素
-     if(seqList->length + 1 >= MAX_SIZE)    
-     {
-        cout<<"数组已经满了"<<endl;
+    if(seqList->length + 1 >= MAX_SIZE)
+    {
+        printf("数组已满，插入元素失败！\n");
         return;
-     }
+    }
      if (index < 0|| index > MAX_SIZE - 1)
      {
         printf("只能在允许的下标范围内插入元素[0, %d]\n", MAX_SIZE - 1);
