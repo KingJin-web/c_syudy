@@ -1,4 +1,4 @@
-#include<cstdio>
+#include<stdio.h>
 #include"Sequencelist.cpp"
 
 
@@ -11,10 +11,7 @@ ElementType dataArray[] = {
 void PrintList(SeqList * seqList);
 void TestSeqenceList();
 
-int main(){
-    TestSeqenceList();
-    return 0;
-}
+
 
 void TestSeqentList(){
     SeqList seqList;    //要操作的顺序表
@@ -30,4 +27,9 @@ void PrintList(SeqList * seqList)
     for(int i = 0; i < seqList->length; i++){
         printf("%d\t%d\n", seqList->datas[i].id, seqList->datas[i].name);
     }
+}
+
+int main(){
+    TestSeqenceList();
+    return 0;
 }
