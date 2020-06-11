@@ -43,10 +43,12 @@ typedef struct linknode
     ElemType data;              //数据域
     struct linknode *next;      //指针域
 } LiStack;
+
 void InitStack(LiStack *&s)     //初始化栈s
 {   s=(LiStack *)malloc(sizeof(LiStack));
     s->next=NULL;
 }
+
 void DestroyStack(LiStack *&s)  //销毁栈
 {   LiStack *p=s,*q=s->next;
     while (q!=NULL)
