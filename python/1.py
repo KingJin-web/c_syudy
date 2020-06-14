@@ -61,9 +61,11 @@
 
 
 
+a = 2
 
-
-import turtle as t
-
-t.setup(width=200,height = 200)
+a*= 3 + 5**2
+print(a)
+a = 2
+x = a*(3+5*5)
+print(x)
 
