@@ -62,10 +62,11 @@
 
 
 a = 2
+b = 1
 
-a*= 3 + 5**2
-print(a)
-a = 2
-x = a*(3+5*5)
-print(x)
+c = a + b;
+
+
+print("a + b = ",c)
+print("a + b = " + c)
 
