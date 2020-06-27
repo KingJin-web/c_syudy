@@ -169,7 +169,9 @@ void DeleteAll(LinkList &head)
     head = NULL;
 }
 
-//3. 增加功能：链表逆转
+/**
+ * 3. 增加功能：链表逆转
+ * */
 void reverseList_recur(LinkList head, LinkList current)
 {
     if (current == NULL)
@@ -184,6 +186,9 @@ void reverseList_recur(LinkList head, LinkList current)
     current->next = p;
     reverseList_recur(head, q);
 }
+/**
+ * 3. 增加功能：链表逆转
+ * */
 void reverseList(LinkList list)
 {
     if (list == NULL)
@@ -219,6 +224,7 @@ void reverseList2(LinkList head)
         p = q;
     }
 }
+
 //4. 增加功能：两个有序链表合并为一个有序链表
 LinkList mergeSort(LinkList list1, LinkList list2)
 {
@@ -260,12 +266,16 @@ int main()
     int b[] = {2, 4, 6, 8, 10, 12, 14};
     LinkList list = CreateListByTailInsert(a, 2);
     LinkList list2 = CreateListByTailInsert(b, 7);
-
+    // cout<<"逆转前"<<endl;
+    // printlist(list2);
+    // reverseList(list2);
+    // cout<<"逆转后"<<endl;
+    printlist(list2);
     printlist(list);
-    reverseList(list);
-    printlist(list);
+    // reverseList(list);
+    // printlist(list);
 
-    reverseList(list);
+    //reverseList(list);
     LinkList list3 = mergeSort(list, list2);
     printlist(list3);
 

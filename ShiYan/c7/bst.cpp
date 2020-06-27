@@ -1,8 +1,4 @@
-/*
- * @Descripttion: 
- * @Author: Mr Wu
- */
-//bst sort
+
 #include <iostream>
 using namespace std;
 typedef int ElemType;
