@@ -194,7 +194,7 @@ void test1(sqlist &L)
             int e = 0;
 
             listdelete(L, i, e); //
-            cout << "\ndelte " << e << endl;
+            cout << "delte " << e << endl;
         }
     }
 }
@@ -295,10 +295,55 @@ int main(void)
     {
         listinsert(L1, i + 1, a[i]);
     }
-    deleteRepeatedData(L1);
-    print(L1);
-    /*  sqlist L; //初始化
 
+    sqlist L2;
+    initlist(L2);
+    int b[] = {1, 2, 3, 3, 2, 1};
+    for (int i = 0; i < sizeof(b) / 4; i++)
+    {
+        listinsert(L2, i + 1, b[i]);
+    }
+    // deleteRepeatedData(L1);
+    // print(L1);
+    // cout << "\ntest1,delete a[i]:";
+    // test1(L1);
+    print(L1);
+
+
+    
+    // if (test2(L1))
+    //     cout << "\n对称!\n";
+    // else
+    //     cout << "\n不对称!\n";
+    // print(L2);         
+    // if (test2(L2))
+    //     cout << "\n对称!\n";
+    // else
+    //     cout << "\n不对称!\n";
+    
+    sqlist L3;
+    initlist(L3);
+    int c[] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+    for (int i = 0; i < sizeof(c) / 4; i++)
+    {
+        listinsert(L3, i + 1, c[i]);
+    }
+    printf("\n");
+    //test3(L1);
+    
+    //（3）	实现把该表中所有奇数排在偶数之前,即表的前面为奇数,后面为偶数
+    //print(L1);
+    
+//（4）	把两个有序顺序表进行有序合并为新的顺序表
+    print(L3);
+    printf("\n");
+    print(mergeSortedList(L1,L3));
+
+
+
+    /*  sqlist L; //初始化
+    
     if (initlist(L))
         cout << "build sqlist success!\n";
     else
