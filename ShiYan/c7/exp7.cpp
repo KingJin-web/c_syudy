@@ -1,5 +1,5 @@
 #include <iostream>
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 /**
  * 
@@ -17,78 +17,127 @@ int seq_search(int arr[], int n, int key)
 {
     int i;
     int c = 0;
-    for(i = 0; i < n; i++)
-     {
-         if(key == arr[i])
-         {
-             printf("查找 %d 次\n",c) ; 
-             return i;
-              //查找成功
-         }else
-         {
-             c++;
-         }
-            
-     }
-     printf("查找 %d 次\n",c) ; 
-     return -1;          //查找失败
-}
-
-//折半查找
-int binary_search(int arr[],int k,int left,int right)
-{
-    while(left<=right)//建立一个循坏
+    for (i = 0; i < n; i++)
     {
-        int mid=left+(right-left)/2;//下标中间值
-        if(arr[mid]>k)
+        if (key == arr[i])
         {
-            right=mid-1;
+            printf("查找 %d 次\n", c);
+            return i;
+            //查找成功
         }
-        else if(arr[mid]<k)
-            left=mid+1;
         else
         {
-            return mid;//走到这就是等于。K就是要找的 ,返回的是下标值
+            c++;
         }
     }
-    return -1;//这里即left>right .找不到这个数
+    printf("查找 %d 次\n", c);
+    return -1; //查找失败
+}
+// 2.冒泡排序
+void bubble_sort(int *arr, int len)
+{
+    int i, j, temp;
+    for (i = 0; i < len - 1; i++)
+        for (j = 0; j < len - 1 - i; j++)
+            if (arr[j] > arr[j + 1])
+            {
+                swap(arr[j], arr[j + 1]);
+            }
+}
+//折半查找
+int binary_search(int arr[], int k, int left, int right)
+{
+    bubble_sort(arr, right);
+    int c = 0;
+    printf("排序后：");
+    for (int i = 0; i < right; i++)
+        printf("%d ", arr[i]);
+    printf("\n");
+    while (left <= right) //建立一个循坏
+    {
+        int mid = left + (right - left) / 2;
+        //cout<<arr[mid]<<endl;//下标中间值
+        if (arr[mid] > k)
+        {
+
+            right = mid - 1;
+        }
+        else if (arr[mid] < k)
+        {
+            left = mid + 1;
+        }
+        else
+        {
+            c++;
+            printf("查找了%d次\n", c);
+            return mid; //走到这就是等于。K就是要找的 ,返回的是下标值
+        }
+        c++;
+    }
+    printf("查找了%d次\n", c);
+    return -1; //这里即left>right .找不到这个数
 }
 
-// int binary_Search(int arr[], int n, int key){
-//      int low = 0;
-//      int high = n - 1;
-//      while(low<= high){
-//          int mid = (low + high)/2;
-//          int midVal = arr[mid];
-//          if(midVal<key)
-//              low = mid + 1;
-//         else if(midVal>key)
-//              high = mid - 1;
-//          else
-//              return mid;
-//     }
-//      return -1;
-//  }
-
-int main(){
-
-    int arr[] = {22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70};
-     //int arr[]={1,2,3,4,5,6,7,8,9,10};
-    int len = (int) sizeof(arr) / sizeof(*arr);
+void test3(int arr[], int len)
+{
     
+    int ay[10000];
+    int temp = 0;
+    int i , j;
+    int number1 = 0;
+   
+    int *amax = (int *)malloc(sizeof(int));
+    *amax = arr[0];
+    for (i = 0; i < len; i++)
+    {
+        if (*amax < arr[i])
+            *amax = arr[i];
+    }
+    for (i = 0; i < len; i++)
+    {
+        temp = arr[i];
+
+        ay[temp]++;
+    }
+    int *max = (int *)malloc(sizeof(int));
+    *max = ay[0];
+
+    for (j = 0; j <= *amax; j++)
+    {
+        if (*max < ay[j])
+        {
+            *max = ay[j];
+            number1 = j;
+        }
+    }
+    printf("%d\n", number1);
+}
+
+int main()
+{
+
+    //int arr[] = {22, 34, 3, 32, 82, 55, 89, 50, 37, 5, 64, 35, 9, 70};
+    int arr[] = {1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6, 7, 8, 9, 10};
+    int len = (int)sizeof(arr) / sizeof(*arr);
+
+    //test3(arr, len);
+
     printf("原数组：");
     for (int i = 0; i < len; i++)
-                printf("%d ", arr[i]);
+        printf("%d ", arr[i]);
     printf("\n");
-    // int a =binary_search(arr,key,0,len-1);
-    int key = 31;
-    int a = seq_search(arr,len,key);
-    if( a != -1){
-         printf("找到%d了：在序号是 %d ",key,a);
-    }else
-    {
-         printf("没找到 %d",key);
-    }
-     
+    printf("出现最多的数字是：");
+    test3(arr, len);
+    // int key = 70;
+    // int a = binary_search(arr, key, 0, len);
 
+    //int a = seq_search(arr,len,key);
+    // if (a != -1)
+    // {
+    //     printf("找到%d了：在序号是 %d ", key, a);
+    // }
+    // else
+    // {
+    //     printf("没找到 %d", key);
+    // }
 }
