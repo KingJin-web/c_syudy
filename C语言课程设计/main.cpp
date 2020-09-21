@@ -433,7 +433,7 @@ void upload(STU *p, int *pn)
 	if ((fp = fopen(str2, "r")) == NULL)
 	{
 		printf("打开失败！\n");
-		return 0;
+		
 	}
 	else
 	{
@@ -456,7 +456,7 @@ void save(STU *p, int n)
 	if ((fp = fopen("学生成绩信息.txt", "w")) == NULL)
 	{
 		printf("打开失败!\n");
-		return 0;
+		
 	}
 	else {
 
@@ -478,12 +478,12 @@ void backup()
 	if ((in = fopen("学生成绩信息.txt", "r")) == NULL)
 	{
 		printf("打开失败！\n");
-		return 0;
+		
 	}
 	if ((out = fopen("学生成绩备份.txt", "w")) == NULL)
 	{
 		printf("打开失败！\n");
-		return 0;
+		
 	}
 	ch = fgetc(in);
 	while (ch != EOF)

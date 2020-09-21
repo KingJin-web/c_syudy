@@ -75,7 +75,7 @@ int binary_search(int arr[], int k, int left, int right)
         c++;
     }
     printf("查找了%d次\n", c);
-    return -1; //这里即left>right .找不到这个数
+    return -1;   //这里即left>right .找不到这个数
 }
 
 void test3(int arr[], int len)

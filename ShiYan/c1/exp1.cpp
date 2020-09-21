@@ -286,7 +286,7 @@ void deleteRepeatedData(sqlist &list) // 1 2 3  3 4 5 6 6 8 8 9
         }
 }
 
-int main(void)
+int main()
 {
     sqlist L1;
     initlist(L1);
