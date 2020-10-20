@@ -1,4 +1,3 @@
-
 {
     "configurations": [
         {
@@ -19,10 +18,9 @@
                 "__GNUC__=6",
                 "__cdecl=__attribute__((__cdecl__))"
             ],
-            "intelliSenseMode": "msvc-x64",
+            "intelliSenseMode": "gcc-x86",
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": "",
                 "path": [
                     "${workspaceRoot}",
                     "F:/mingw64/include/**",
@@ -33,7 +31,27 @@
                     "F:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
                     "F:/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"
                 ]
-            }
+            },
+            "macFrameworkPath": [],
+            "compilerArgs": [],
+            "cStandard": "gnu18",
+            "cppStandard": "gnu++14",
+            "compilerPath": "F:\\mingw64\\bin\\gcc.exe"
+        },
+        {
+            "name": "Win64",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "F:\\mingw64\\bin\\gcc.exe",
+            "cStandard": "gnu18",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

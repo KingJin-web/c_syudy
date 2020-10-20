@@ -1,53 +1,39 @@
-#include <stdio.h>
-
-
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
-   printf("Hello world");
+    float a, c;
+    char b;
+    scanf("%f%c%f", &a, &b, &c);
+    switch (b)
+    {
+    case '+':
+        printf("%.2f", a + c);
+        break;
+    case '-':
+        printf("%.2f", a - c);
+        break;
+    case '*':
+        printf("%.2f", a*c);
+        break;
+    case '/':
+        if (c == 0)
+        {
+            printf("data erro");
+        }
+        else
+        {
+            printf("%0.2f", a / c);
+        }
+    default:
+        break;
+    }
+    return 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// #include <stdio.h>
-
-// int main()
-// {
-//         printf("\n\
+   // int main()
+   // {
+   //         printf("\n\
 //          @\n\
 //         / \\\n\
 //         * *\n\
@@ -61,5 +47,5 @@ int main()
 //       * * * *\n\
 //     * * * * * *\n");
 
-//         return 0;
-// }
+   //         return 0;
+   // }

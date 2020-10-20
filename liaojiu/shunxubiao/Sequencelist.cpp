@@ -1,5 +1,6 @@
 #include "Sequencelist.h"
-#include<stdio.h>
+#include <bits/stdc++.h>
+using namespace std;
  
 
 /**
@@ -59,5 +60,12 @@ void InitList(SeqList * seqList, ElementType * elemArray, int length)
     {
         //每次循环都在下标为i的位置插入一个元素
         InsertElement(seqList, i, elemArray[i]);
+    }
+}
+
+void PrintList(SeqList * seqList)
+{
+    for(int i = 0; i < seqList->length; i++){
+        printf("%d\t%s\n", seqList->datas[i].id, seqList->datas[i].name);
     }
 }

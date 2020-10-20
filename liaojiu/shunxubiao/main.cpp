@@ -1,17 +1,13 @@
 #include<stdio.h>
 #include"Sequencelist.cpp"
 
-
 ElementType dataArray[] = {
-    {1, 1},
-    {2, 2},
-    {3, 3},
-    {4, 4}
+    {1, (char*)"1"},
+    {2, (char*)"2"},
+    {3, (char*)"3"},
+    {4, (char*)"4"},
+    {5, (char*)"蔡徐坤"},
 };
-void PrintList(SeqList * seqList);
-void TestSeqenceList();
-
-
 
 void TestSeqentList(){
     SeqList seqList;    //要操作的顺序表
@@ -22,14 +18,9 @@ void TestSeqentList(){
 
 }
 
-void PrintList(SeqList * seqList)
-{
-    for(int i = 0; i < seqList->length; i++){
-        printf("%d\t%d\n", seqList->datas[i].id, seqList->datas[i].name);
-    }
-}
 
 int main(){
-    TestSeqenceList();
+    TestSeqentList();
+    //PrintList(dataArray);
     return 0;
 }
