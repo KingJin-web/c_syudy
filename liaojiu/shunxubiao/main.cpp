@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include"Sequencelist.cpp"
 
+
 ElementType dataArray[] = {
     {1, (char*)"1"},
     {2, (char*)"2"},
